@@ -1,7 +1,6 @@
-# tomcat
 server:
   port: 8002
-# spring boot admin
+# spring-boot-admin
 spring:
   application:
     name: kitty-backup

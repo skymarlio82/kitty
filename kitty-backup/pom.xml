@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-
 	<groupId>com.louis</groupId>
 	<artifactId>kitty-backup</artifactId>
 	<version>${project.version}</version>
 	<packaging>jar</packaging>
-	
 	<name>kitty-backup</name>
 	<description>kitty backup service</description>
-
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -28,7 +25,6 @@
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<docker.image.prefix>kitty</docker.image.prefix>
 	</properties>
-
 	<dependencies>
 		<!-- spring boot -->
 		<dependency>
@@ -46,24 +42,23 @@
 			<version>${swagger.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-swagger-ui</artifactId>
-		    <version>${swagger.version}</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
 		</dependency>
-        <!--spring-boot-admin-->
-       	<dependency>
-		    <groupId>de.codecentric</groupId>
-		    <artifactId>spring-boot-admin-starter-client</artifactId>
-		    <version>${spring.boot.admin.version}</version>
+		<!--spring-boot-admin -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${spring.boot.admin.version}</version>
 		</dependency>
-		<!--consul-->
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-	    </dependency>
+		<!--consul -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+		</dependency>
 	</dependencies>
-	
-	<!--srping cloud-->
+	<!-- srping cloud -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -75,7 +70,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
 	<build>
 		<resources>
 			<resource>
@@ -108,7 +102,6 @@
 					</resources>
 				</configuration>
 			</plugin>
-			<!-- Docker maven plugin -->
 		</plugins>
 	</build>
 </project>

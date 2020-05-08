@@ -13,10 +13,10 @@ spring:
       label: master # git仓库分支
       server:
         git:
-          uri: https://gitee.com/liuge1988/kitty.git # 配置git仓库的地址
+          uri: https://github.com/skymarlio82/kitty.git # 配置git仓库的地址
           search-paths: config-repo # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username: username # git仓库的账号
-          password: password # git仓库的密码
+          username: skymarlio82 # git仓库的账号
+          password: _Rrf9jxwd # git仓库的密码
 #   config:
 #     server:
 #       native:
