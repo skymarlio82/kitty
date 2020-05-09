@@ -1,3 +1,4 @@
+
 package com.louis.kitty.consumer;
 
 import org.springframework.boot.SpringApplication;
@@ -25,10 +26,11 @@ public class KittyConsumerApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-	
+
 	// 此配置是为了服务监控而配置，与服务容错本身无关，
 	// ServletRegistrationBean因为springboot的默认路径不是"/hystrix.stream"，
 	// 只要在自己的项目里配置上下面的servlet就可以了
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public ServletRegistrationBean getServlet() {
 		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();

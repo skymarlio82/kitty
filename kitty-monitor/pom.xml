@@ -9,12 +9,6 @@
 	<packaging>jar</packaging>
 	<name>kitty-monitor</name>
 	<description>kitty monitor service</description>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -24,13 +18,19 @@
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<docker.image.prefix>kitty</docker.image.prefix>
 	</properties>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 	<dependencies>
 		<!-- spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<!--spring-boot-admin -->
+		<!-- spring-boot-admin -->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server</artifactId>
@@ -41,13 +41,13 @@
 			<artifactId>spring-boot-admin-server-ui</artifactId>
 			<version>${spring.boot.admin.version}</version>
 		</dependency>
-		<!--consul -->
+		<!-- consul -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
 		</dependency>
 	</dependencies>
-	<!--srping cloud -->
+	<!-- spring cloud -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -65,7 +65,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- Docker maven plugin -->
+			<!-- Docker Maven Plugin -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>

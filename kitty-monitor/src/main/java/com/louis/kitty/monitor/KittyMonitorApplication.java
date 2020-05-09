@@ -1,3 +1,4 @@
+
 package com.louis.kitty.monitor;
 
 import org.springframework.boot.SpringApplication;
@@ -8,6 +9,7 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
 /**
  * 启动器
+ * 
  * @author Louis
  * @date Oct 29, 2018
  */

@@ -1,3 +1,4 @@
+
 package com.louis.kitty.hystrix;
 
 import org.springframework.boot.SpringApplication;
@@ -8,6 +9,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * 启动器
+ * 
  * @author Louis
  * @date Oct 29, 2018
  */

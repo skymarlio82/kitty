@@ -1,14 +1,16 @@
+
 package com.louis.kitty.backup.constants;
 
 import java.io.File;
 
 /**
  * 常量类
+ * 
  * @author Louis
  * @date Oct 29, 2018
  */
 public interface BackupConstants {
-	
+
 	/** 备份目录名称 */
 	public static final String BACKUP_FOLDER_NAME = "_kitty_backup";
 	/** 备份目录 */
@@ -25,5 +27,4 @@ public interface BackupConstants {
 	public static final String DEFAULT_BACKUP_NAME = "backup";
 	/** 默认备份还原文件 */
 	public static final String DEFAULT_RESTORE_FILE = BACKUP_FOLDER + DEFAULT_BACKUP_NAME + File.separator + BACKUP_FILE_NAME;
-	
 }
