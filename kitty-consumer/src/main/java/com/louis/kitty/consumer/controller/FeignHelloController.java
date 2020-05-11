@@ -1,3 +1,4 @@
+
 package com.louis.kitty.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +10,12 @@ import com.louis.kitty.consumer.feign.KittyProducerService;
 @RestController
 public class FeignHelloController {
 
-    @Autowired
-    private KittyProducerService kittyProducerService;
-    
-    @RequestMapping("/feign/call")
-    public String call() {
-        // 像调用本地服务一样
-        return kittyProducerService.hello();
-    }
+	@Autowired
+	private KittyProducerService kittyProducerService;
+
+	@RequestMapping("/feign/call")
+	public String call() {
+		// 像调用本地服务一样
+		return kittyProducerService.hello();
+	}
 }

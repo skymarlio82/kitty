@@ -1,3 +1,4 @@
+
 package com.louis.kitty.producer.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello kitty 2 !";
-    }
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello kitty2 ...";
+	}
 }
